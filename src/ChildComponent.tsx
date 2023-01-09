@@ -6,11 +6,14 @@ interface ChildComponentProps {
 
 const ChildComponent: React.FC<ChildComponentProps> = (
     props: ChildComponentProps
-) => {
-    const [count, setCount] = useState(1);
+): JSX.Element => {
+    //destrcture
+    //const (property1,property2) =obj
+    //const [element0,element1] = array
+    const [count, setCount] = useState(1); //hook
     const { message } = props;
-    const handleAdd = () => setCount(count + 1);
-    const handleSubtract = () => setCount(count - 1);
+    const handleAdd = (): void => setCount(count + 1);
+    const handleSubtract = (): void => setCount(count - 1);
 
     return (
         <div>
